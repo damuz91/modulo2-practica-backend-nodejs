@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded());
 
 app.get('/', function (req, res) {
    res.send('Esta es una sumadora. Envía por POST los 2 parámetros a sumar');
