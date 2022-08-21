@@ -7,6 +7,7 @@ app.get('/', function (req, res) {
 
 app.post('/', function(req, res) {
    console.log("Recibí una solicitud de suma")
+   console.log("Los parámetros son: " + req.body)
    console.log("Los parámetros son: " + req.body.num1 + " y " + req.body.num2)
    var a = parseInt(req.body.num1);
    var b = parseInt(req.body.num2);
@@ -14,7 +15,7 @@ app.post('/', function(req, res) {
    res.send(c.toString());
 });
 
-var server = app.listen(process.env.PORT || 5000, function () {
+var server = app.listen(process.env.PORT || 8081, function () {
    var host = server.address().address
    var port = server.address().port
    
